@@ -13,8 +13,8 @@ namespace FunctionApp1
             [Blob("output/{name}", FileAccess.Write, Connection = "AzureWebJobsStorage")] Stream opBlob,
             string name, ILogger log)
         {
-            var len = myBlob.Length;
-            log.LogDebug(string.Format("{0} is length",len));
+            var mylen = myBlob.Length;
+            log.LogDebug(string.Format("{0} is length", mylen));
             myBlob.CopyTo(opBlob);
         }
     }
