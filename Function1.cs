@@ -14,6 +14,7 @@ namespace FunctionApp1
             string name, ILogger log)
         {
             var len = myBlob.Length;
+            log.LogDebug(string.Format("{0} is length",len));
             myBlob.CopyTo(opBlob);
         }
     }
